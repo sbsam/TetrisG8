@@ -20,4 +20,7 @@
     <color name="rosaClarito">#e58ec9</color>
     <color name="gris">#b02e282e</color>
     <color name="cyan">#00a6d6</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#030A29</color>
+    <color name="colorDarkBlue">#010722</color>
 </resources>
