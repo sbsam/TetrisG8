@@ -71,12 +71,12 @@ public class Celda { //Clase celda de la que están formadas las piezas
         return new BitmapDrawable(resized);
     }
 
-    public void pintarCelda(Canvas canvas){
-        /*int x = xCentroTabl - ancho/2;
+    public void pintarCelda(Canvas canvas){ // método que dibuja la celda
+        int x = xCentroTabl - ancho/2;
         // int y = yCentroTabl - alto/2;
         //int y = 0;
         dibujo.setBounds(x, y, x+ancho, y+alto);
-        canvas.save();*/
+        dibujo.draw(canvas);
     }
 
 }
