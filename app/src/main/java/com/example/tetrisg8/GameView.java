@@ -1,4 +1,4 @@
-package com.example.tetrisgame;
+package com.example.tetrisg8;
 
 import android.app.ActionBar;
 import android.content.Context;
