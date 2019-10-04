@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_main);
         this.caja_score = (TextView)findViewById(R.id.caja_score);
         //to set score
         //this.caja_score.setText(String.valueOf());
@@ -32,13 +31,7 @@ public class MainActivity extends AppCompatActivity {
     
     
     
-    public void Jugar(View view) {
 
-    }
-
-    public void puntuacionFinal(View view) {
-
-    }
     //move left
     public void moveLeft(View view) {
     }
