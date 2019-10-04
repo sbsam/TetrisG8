@@ -6,4 +6,10 @@ public class PiezaI implements Pieza {
     public PiezaI() {
         pieza = new Celda[4];
     }
+
+
+    @Override
+    public Celda[] getPieza() {
+        return pieza;
+    }
 }

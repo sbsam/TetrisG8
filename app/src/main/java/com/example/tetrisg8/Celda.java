@@ -19,6 +19,26 @@ public class Celda { //Clase celda de la que están formadas las piezas
     private int xAnterior; // Coordenada x previa de la celda
     private int yAnterior; // Coordenada y previa de la celda
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y){
+        this.y = y;
+    }
+
+    public int getTipoPieza(){
+        return tipoPieza;
+    }
+
     public Celda(Context context, int x, int y, int ancho, int alto, int tipo){
         this.x = x;
         this.y = y;
