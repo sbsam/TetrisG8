@@ -1,7 +1,7 @@
 package com.example.tetrisg8;
 
 import android.content.Context;
-import android.graphics.Canvas;
+
 
 public class PiezaI extends Pieza {
 

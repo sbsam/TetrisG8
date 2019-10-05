@@ -39,11 +39,19 @@ public class Celda { //Clase celda de la que están formadas las piezas
         return tipoPieza;
     }
 
+    public Celda(int x, int y){
+        this.x = x;
+        this.y = y;
+        tipoPieza = 0;
+        ancho = 0;
+        alto = 0;
+    }
+
     public Celda(Context context, int x, int y, int tamaño, int tipo){
         this.x = x;
         this.y = y;
-        this.ancho = tamaño;
-        this.alto = tamaño;
+        ancho = tamaño;
+        alto = tamaño;
         tipoPieza = tipo;
         switch (tipoPieza){
             case 1:
