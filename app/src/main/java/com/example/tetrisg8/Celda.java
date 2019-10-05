@@ -39,11 +39,11 @@ public class Celda { //Clase celda de la que están formadas las piezas
         return tipoPieza;
     }
 
-    public Celda(Context context, int x, int y, int ancho, int alto, int tipo){
+    public Celda(Context context, int x, int y, int tamaño, int tipo){
         this.x = x;
         this.y = y;
-        this.ancho = ancho;
-        this.alto = alto;
+        this.ancho = tamaño;
+        this.alto = tamaño;
         tipoPieza = tipo;
         switch (tipoPieza){
             case 1:
@@ -94,9 +94,11 @@ public class Celda { //Clase celda de la que están formadas las piezas
     public void pintarCelda(Canvas canvas){ // método que dibuja la celda
         int x = xCentroTabl - ancho/2;
         // int y = yCentroTabl - alto/2;
-        //int y = 0;
+        int y = 0;
         dibujo.setBounds(x, y, x+ancho, y+alto);
         dibujo.draw(canvas);
+        xAnterior = xCentroTabl;
+        yAnterior = y;
     }
 
 }

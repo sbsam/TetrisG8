@@ -1,6 +1,6 @@
 package com.example.tetrisg8;
 
-public class tablero {
+public class Tablero {
 
     int tablero[][] = new int[20][10];
 
@@ -86,7 +86,7 @@ public class tablero {
         for (int i = 0; i < 4; i++) {
             if (tablero[piezaGirada.getPieza()[i].getX()][(piezaGirada.getPieza()[i].getY())] == 0 && !(piezaGirada.getPieza()[i].getX() < 0)
                     && !(piezaGirada.getPieza()[i].getX() > 19) && !(piezaGirada.getPieza()[i].getY() < 0) && !(piezaGirada.getPieza()[i].getY() > 9)) {
-                //comprueba si las celdas están ocupadas o se salen del tablero
+                //comprueba si las celdas están ocupadas o se salen del Tablero
                 comprobar = false;
             }
             else {
