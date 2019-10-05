@@ -39,6 +39,8 @@ public class Celda { //Clase celda de la que están formadas las piezas
         return tipoPieza;
     }
 
+    public void setTipoPieza(int tipoPieza) { this.tipoPieza = tipoPieza; }
+
     public Celda(Context context, int x, int y, int tamaño, int tipo){
         this.x = x;
         this.y = y;
