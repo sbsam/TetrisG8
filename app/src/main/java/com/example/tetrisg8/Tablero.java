@@ -1,5 +1,6 @@
 package com.example.tetrisg8;
 
+
 public class Tablero {
 
     Celda tablero[][] = new Celda[20][10];
@@ -78,27 +79,19 @@ public class Tablero {
         return comprobar;
     }
 
-    private boolean ocupadoGiro(Pieza piezaGirada){
+    private boolean ocupadoGiro(Pieza pieza){
         boolean comprobar = false;
-        for (int i = 0; i < 4; i++) { //borra la pieza para que al comprobar no se encuentre con una celda de la propia pieza
-            tablero[piezaGirada.getPieza()[i].getX()][piezaGirada.getPieza()[i].getY()].setTipoPieza(0);
-        }
+        Celda celdasComprobar [] = pieza.coordPiezaGirada(); //METODO QUE DEVUELVE UN ARRAY CON LAS COORDENADAS QUE OCUPARIA LA PIEZA GIRADA
         for (int i = 0; i < 4; i++) {
-            if (tablero[piezaGirada.getPieza()[i].getX()][(piezaGirada.getPieza()[i].getY())].getTipoPieza() == 0 && !(piezaGirada.getPieza()[i].getX() < 0)
-                    && !(piezaGirada.getPieza()[i].getX() > 19) && !(piezaGirada.getPieza()[i].getY() < 0) && !(piezaGirada.getPieza()[i].getY() > 9)) {
+            if (tablero[celdasComprobar[i].getX()][(celdasComprobar[i].getY())].getTipoPieza() == 0 && !(celdasComprobar[i].getX() < 0)
+                    && !(celdasComprobar[i].getX() > 19) && !(celdasComprobar[i].getY() < 0) && !(celdasComprobar[i].getY() > 9)) {
                 //comprueba si las celdas están ocupadas o se salen del tablero
                 comprobar = false;
             }
             else {
                 comprobar = true;
-                for (int j = 0; j < 4; j++) {
-                    tablero[piezaGirada.getPieza()[j].getX()][piezaGirada.getPieza()[j].getY()].setTipoPieza(piezaGirada.getPieza()[j].getTipoPieza()); //si está ocupado vuelve a pintar la pieza y devuelve true
-                }
                 return comprobar;
             }
-        }
-        for (int i = 0; i < 4; i++) {
-            tablero[piezaGirada.getPieza()[i].getX()][piezaGirada.getPieza()[i].getY()].setTipoPieza(piezaGirada.getPieza()[i].getTipoPieza()); //si no está ocupado también vuelve a pintar la pieza
         }
         return comprobar;
     }
