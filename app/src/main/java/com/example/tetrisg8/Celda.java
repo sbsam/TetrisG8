@@ -49,56 +49,12 @@ public class Celda { //Clase celda de la que están formadas las piezas
 
     public void setTipoPieza(int tipoPieza) { this.tipoPieza = tipoPieza; }
 
-    public Celda(Context context, int x, int y, int tamaño, int tipo){
+    public Celda(int x, int y, int tamaño, int tipo){
         this.x = x;
         this.y = y;
         ancho = tamaño;
         alto = tamaño;
         tipoPieza = tipo;
-        switch (tipoPieza){
-            case 1:
-            {
-                dibujo = redimensionarCelda(context,R.color.cyan,ancho,alto);
-                break;
-            }
-            case 2:
-            {
-                dibujo = redimensionarCelda(context,R.color.azul,ancho,alto);
-                break;
-            }
-            case 3:
-            {
-                dibujo = redimensionarCelda(context,R.color.naranja,ancho,alto);
-                break;
-            }
-            case 4:
-            {
-                dibujo = redimensionarCelda(context,R.color.amarillo,ancho,alto);
-                break;
-            }
-            case 5:
-            {
-                dibujo = redimensionarCelda(context,R.color.verde,ancho,alto);
-                break;
-            }
-            case 6:
-            {
-                dibujo = redimensionarCelda(context,R.color.morado,ancho,alto);
-                break;
-            }
-            case 7:
-            {
-                dibujo = redimensionarCelda(context,R.color.rojo,ancho,alto);
-                break;
-            }
-        }
-    }
-
-    public Drawable redimensionarCelda(Context context, int color, int ancho, int alto){
-        //Se asigna el color de la celda
-        Bitmap BitmapOrg = BitmapFactory.decodeResource(context.getResources(), color);
-        Bitmap resized = Bitmap.createScaledBitmap(BitmapOrg, ancho, alto, true);
-        return new BitmapDrawable(resized);
     }
 
     public void pintarCelda(Canvas canvas){ // método que dibuja la celda
