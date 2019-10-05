@@ -7,7 +7,7 @@ public class Tablero {
     public void inicializarTablero() {
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < 10; j++) {
-                tablero[i][j].setTipoPieza(0);
+                tablero[i][j] = new Celda(i,j);
             }
         }
     }
