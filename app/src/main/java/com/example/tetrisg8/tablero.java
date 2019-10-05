@@ -107,7 +107,6 @@ public class tablero {
         if (! ocupadoBajar (pieza)){ //si la fila de abajo no está ocupada la matriz de la ficha baja una posición
             for (int i=0; i<4; i++) {
                 pieza.getPieza()[i].setX(pieza.getPieza()[i].getX() + 1);
-                pieza.getPieza()[i].setY(pieza.getPieza()[i].getY() + 1);
             }
         }
     }
